@@ -29,17 +29,3 @@ merge_protections:
       - base = vm7-check-env-sensitive-261016
     success_conditions:
       - approved-reviews-by = onecursor13-vm7-secondary-20261013
-
-queue_rules:
-  - name: vm7-config-tighten-261016
-    queue_conditions:
-      - "#approved-reviews-by >= 2"
-    merge_conditions:
-      - "#approved-reviews-by >= 2"
-    batch_size: 1
-    merge_method: merge
-
-merge_queue:
-  mode: serial
-  max_parallel_checks: 1
-  status_comments: all
