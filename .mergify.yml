@@ -32,8 +32,10 @@ merge_protections:
 
 queue_rules:
   - name: vm7-config-tighten-261016
-    queue_conditions: []
-    merge_conditions: []
+    queue_conditions:
+      - "#approved-reviews-by >= 2"
+    merge_conditions:
+      - "#approved-reviews-by >= 2"
     batch_size: 1
     merge_method: merge
 
